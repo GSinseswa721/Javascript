@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // Function to change the hour format
+function changeHourFormat(hour, format = '12hr') {
+    // Check the specified format and adjust the hour accordingly
+    if (format === '12hr') {
+        return hour % 12 !== 0 ? hour % 12 : 12;
+    } else if (format === '24hr') {
+        return hour;
+    }
+}
+
+// Example usage
+// Prompt the user to enter the hour
+let time = prompt("Enter the hour: ");
+// Change the hour format to 12-hour and 24-hour
+let result12hr = changeHourFormat(time, '12hr');
+let result24hr = changeHourFormat(time, '24hr');
+// Display the results
+console.log(`12-hour format: ${result12hr}`);
+console.log(`24-hour format: ${result24hr}`);
+
+    </script>
+</body>
+</html>

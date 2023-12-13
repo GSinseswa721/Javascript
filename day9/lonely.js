@@ -11,3 +11,10 @@ function lonelInteger(arr){
 const myArray = [12,3,44,22,12,3,22];
 const lonely = lonelInteger(myArray);
 console.log(lonely);
+
+function loneInteger(arr){
+    return arr.reduce((acc, curr) => acc ^ curr, 0);
+}
+const array = [22,4,22,4,90,90,3];
+const number =loneInteger(array);
+console.log(number);

@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+var temperatures = [];
+let sum;
+let numT;
+let meanTemp;
+function getTemp(){
+    numT = Number(prompt("How many total temperature you want to enter: ",numT));
+    for(let i= 0; i < numT; i++){
+        temperatures[i] = Number(prompt(`enter temp ${i}: `));
+    }
+}
+function getMeanTemp(){
+    sum=0;
+    for(let i = 0; i < temperatures.length; i++){
+        sum += temperatures[i];
+    }
+    meanTemp = sum / temperatures.length;
+}
+
+//temperatures = [12,34,56,90];
+getTemp();
+getMeanTemp();
+console.log(`Mean Temp: ${meanTemp}`);
+    </script>
+</body>
+</html>
